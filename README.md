@@ -161,6 +161,21 @@ brew install zoxide
 brew install neovim
 ```
 
+### asdf
+
+> <https://asdf-vm.com/>
+
+```shell
+# add to ~/.zshrc
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+```
+
+```shell
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
+asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+```
+
 ## Google
 
 - [Calendar Sync](https://calendar.google.com/calendar/u/0/syncselect)
@@ -181,7 +196,6 @@ brew install neovim
 
 ## Programming Languages
 
-- [asdf](https://asdf-vm.com/)
 - Node.js
 - Go
 - Ruby
