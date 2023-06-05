@@ -4,104 +4,47 @@ Opinionated macOS setup and tool configuration files
 
 ## System Defaults
 
-### Dock: Icon Size
-
-> <https://macos-defaults.com/dock/tilesize.html>
-
 ```shell
+# read current value
 defaults read com.apple.dock "tilesize"
-defaults write com.apple.dock "tilesize" -int "48" && killall Dock
+
+# reset to default value
 defaults delete com.apple.dock "tilesize" && killall Dock
 ```
 
-### Dock: Autohide
-
-> <https://macos-defaults.com/dock/autohide.html>
+### Dock
 
 ```shell
-defaults read com.apple.dock "autohide"
+# icon size: https://macos-defaults.com/dock/tilesize.html
+defaults write com.apple.dock "tilesize" -int "48" && killall Dock
+
+# autohide: https://macos-defaults.com/dock/autohide.html
 defaults write com.apple.dock "autohide" -bool "true" && killall Dock
-defaults delete com.apple.dock "autohide" && killall Dock
-```
 
-### Dock: Autohide Delay
-
-> <https://macos-defaults.com/dock/autohide-delay.html>
-
-```shell
-defaults read com.apple.dock "autohide-delay"
+# autohide delay: https://macos-defaults.com/dock/autohide-delay.html
 defaults write com.apple.dock "autohide-delay" -float "0" && killall Dock
-defaults delete com.apple.dock "autohide-delay" && killall Dock
-```
 
-### Dock: Show Recents
-
-> <https://macos-defaults.com/dock/show-recents.html>
-
-```shell
-defaults read com.apple.dock "show-recents"
+# show recents: https://macos-defaults.com/dock/show-recents.html
 defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
-defaults delete com.apple.dock "show-recents" && killall Dock
 ```
 
-### Finder: Show Extensions
-
-> <https://macos-defaults.com/finder/appleshowallextensions.html>
+### Finder
 
 ```shell
-defaults read NSGlobalDomain "AppleShowAllExtensions"
+# show all extensions: https://macos-defaults.com/finder/appleshowallextensions.html
 defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
-defaults delete NSGlobalDomain "AppleShowAllExtensions" && killall Finder
-```
 
-### Finder: Show Hidden Files
-
-> <https://macos-defaults.com/finder/appleshowallfiles.html>
-
-```shell
-defaults read com.apple.finder "AppleShowAllFiles"
+# show hidden files: https://macos-defaults.com/finder/appleshowallfiles.html
 defaults write com.apple.finder "AppleShowAllFiles" -bool "true" && killall Finder
-defaults delete com.apple.finder "AppleShowAllFiles" && killall Finder
-```
 
-### Finder: Show Path Bar
-
-> <https://macos-defaults.com/finder/showpathbar.html#set-to-true>
-
-```shell
-defaults read com.apple.finder "ShowPathbar"
+# show path bar: https://macos-defaults.com/finder/showpathbar.html
 defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
-defaults delete com.apple.finder "ShowPathbar" && killall Finder
-```
 
-### Finder: Default View Style
-
-> <https://macos-defaults.com/finder/fxpreferredviewstyle.html#set-to-clmv>
-
-```shell
-defaults read com.apple.finder "FXPreferredViewStyle"
+# default view style: https://macos-defaults.com/finder/fxpreferredviewstyle.html
 defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" && killall Finder
-defaults delete com.apple.finder "FXPreferredViewStyle" && killall Finder
-```
 
-### Finder: Default Search Scope
-
-> <https://macos-defaults.com/finder/fxdefaultsearchscope.html>
-
-```shell
-defaults read com.apple.finder "FXDefaultSearchScope"
-defaults write com.apple.finder "FXDefaultSearchScope" -string "SCev" && killall Finder
-defaults delete com.apple.finder "FXDefaultSearchScope" && killall Finder
-```
-
-### Finder: Changing File Extension Warning
-
-> <https://macos-defaults.com/finder/fxenableextensionchangewarning.html>
-
-```shell
-defaults read com.apple.finder "FXEnableExtensionChangeWarning"
+# changing file extension warning: https://macos-defaults.com/finder/fxenableextensionchangewarning.html
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
-defaults delete com.apple.finder "FXEnableExtensionChangeWarning" && killall Finder
 ```
 
 ## XCode
