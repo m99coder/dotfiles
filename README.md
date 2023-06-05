@@ -158,6 +158,7 @@ Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
 - Obsidian
 - WhatsApp
 - VirtualBox
+- 1Password
 
 ## Programming Languages
 
@@ -165,3 +166,7 @@ Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
 - Node.js
 - Go
 - Ruby
+
+## SSH Keys
+
+> <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>
