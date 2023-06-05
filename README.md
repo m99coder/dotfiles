@@ -2,7 +2,7 @@
 
 Opinionated macOS setup and tool configuration files
 
-## macOS
+## System Defaults
 
 ### Dock: Icon Size
 
@@ -103,3 +103,63 @@ defaults read com.apple.finder "FXEnableExtensionChangeWarning"
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
 defaults delete com.apple.finder "FXEnableExtensionChangeWarning" && killall Finder
 ```
+
+## XCode
+
+```shell
+xcode-select --install
+```
+
+## Homebrew
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## Shell
+
+### Oh My Zsh
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Alacritty
+
+### tmux
+
+### Fira Code Nerd Font
+
+```shell
+brew info font-fira-code-nerd-font
+```
+
+### direnv
+
+> <https://direnv.net/>
+
+```shell
+brew install direnv
+```
+
+Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
+
+## Applications
+
+- [Stats](https://github.com/exelban/stats)
+- [Tiles](https://www.sempliva.com/tiles/)
+- Visual Studio Code
+- Docker
+- Miro
+- Figma
+- Notion
+- Obsidian
+- WhatsApp
+- VirtualBox
+
+## Programming Languages
+
+- [asdf](https://asdf-vm.com/)
+- Node.js
+- Go
+- Ruby
