@@ -133,6 +133,14 @@ Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
 brew install zoxide
 ```
 
+### Neovim
+
+> <https://neovim.io/>
+
+```shell
+brew install neovim
+```
+
 ## Applications
 
 - [Stats](https://github.com/exelban/stats)
