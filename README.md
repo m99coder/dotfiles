@@ -47,6 +47,14 @@ defaults write com.apple.finder "FXPreferredViewStyle" -string "Nlsv" && killall
 defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
 ```
 
+## Settings
+
+- Control Centre > Bluetooth, “Show in Menu Bar”
+- Control Centre > Sound, “Always Show in Menu Bar”
+- Control Centre > Battery, “Show Percentage”
+- Software Update > Automatic updates, “Enabled”
+- Trackpad > Tap to click, “Enabled”
+
 ## XCode
 
 ```shell
@@ -140,6 +148,10 @@ brew install zoxide
 ```shell
 brew install neovim
 ```
+
+## Google
+
+- [Calendar Sync](https://calendar.google.com/calendar/u/0/syncselect)
 
 ## Applications
 
