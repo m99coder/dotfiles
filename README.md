@@ -190,9 +190,8 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 - Figma
 - Notion
 - Obsidian
-- WhatsApp
-- VirtualBox
-- 1Password
+- Zoom
+- Slack
 
 ## Programming Languages
 
