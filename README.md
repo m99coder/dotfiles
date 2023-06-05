@@ -52,6 +52,7 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" &
 - Control Centre > Bluetooth, “Show in Menu Bar”
 - Control Centre > Sound, “Always Show in Menu Bar”
 - Control Centre > Battery, “Show Percentage”
+- General > About, Change “Name” to whatever suits you
 - Lock Screen > Start Screen Saver when inactive, “Never”
 - Lock Screen > Turn display off on battery when inactive, “For 20 minutes”
 - Lock Screen > Turn display off on power adapter when inactive, “For 20 minutes”
@@ -114,7 +115,8 @@ brew install tmux
 > <https://github.com/ryanoasis/nerd-fonts>
 
 ```shell
-brew info font-fira-code-nerd-font
+brew tap homebrew/cask-fonts
+brew install font-fira-code-nerd-font
 ```
 
 ### Spaceship Prompt
