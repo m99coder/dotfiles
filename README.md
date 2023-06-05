@@ -126,6 +126,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Alacritty
 
+An alternative and if you ask me way better icon can downloaded [here](https://yoolk.ninja/icons/alacritty/) and is saved for convenience [here](Alacritty.zip) as well.
+
 ### tmux
 
 ### Fira Code Nerd Font
