@@ -178,21 +178,21 @@ export GOPRIVATE="github.com/m99coder"
 export GOROOT=$(brew --prefix golang)/libexec
 
 # To load Zsh syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To load kubectl auto completion
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 source ~/.minikube-completion
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/terraform terraform
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # Spaceship prompt
-source "/usr/local/opt/spaceship/spaceship.zsh"
+source "/opt/homebrew/opt/spaceship/spaceship.zsh"
 
 # Set $PATH
-export PATH="/usr/local/sbin:$PATH:$GOPATH/bin/:$GOROOT/bin"
-export PATH="/usr/local/opt/qt@5/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH:$GOPATH/bin/:$GOROOT/bin"
+export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
 
 # To load Zoxide
 eval "$(zoxide init zsh)"

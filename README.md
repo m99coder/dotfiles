@@ -76,6 +76,12 @@ xcode-select --install
 
 ## Shell
 
+### Zsh
+
+```shell
+brew install zsh
+```
+
 ### Zsh Syntax Highlighting
 
 > <https://github.com/zsh-users/zsh-syntax-highlighting>
