@@ -55,13 +55,25 @@ xcode-select --install
 
 ## Homebrew
 
+> <https://brew.sh/>
+
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Shell
 
+### Zsh Syntax Highlighting
+
+> <https://github.com/zsh-users/zsh-syntax-highlighting>
+
+```shell
+brew install zsh-syntax-highlighting
+```
+
 ### Oh My Zsh
+
+> <https://ohmyz.sh/>
 
 ```shell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -69,15 +81,39 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ### Alacritty
 
+> <https://alacritty.org/>
+
+```shell
+brew install alacritty
+```
+
 An alternative and if you ask me way better icon can downloaded [here](https://yoolk.ninja/icons/alacritty/) and is saved for convenience [here](Alacritty.zip) as well.
 
 ### tmux
 
+> <https://tmux.github.io/>
+
+```shell
+brew install tmux
+```
+
 ### Fira Code Nerd Font
+
+> <https://github.com/ryanoasis/nerd-fonts>
 
 ```shell
 brew info font-fira-code-nerd-font
 ```
+
+### Spaceship Prompt
+
+> <https://spaceship-prompt.sh/>
+
+```shell
+brew install spaceship
+```
+
+Hook into zsh shell as described [here](https://spaceship-prompt.sh/getting-started/).
 
 ### direnv
 
@@ -88,6 +124,14 @@ brew install direnv
 ```
 
 Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
+
+### Zoxide
+
+> <https://github.com/ajeetdsouza/zoxide>
+
+```shell
+brew install zoxide
+```
 
 ## Applications
 
