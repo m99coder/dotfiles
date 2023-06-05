@@ -52,6 +52,10 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" &
 - Control Centre > Bluetooth, “Show in Menu Bar”
 - Control Centre > Sound, “Always Show in Menu Bar”
 - Control Centre > Battery, “Show Percentage”
+- Lock Screen > Start Screen Saver when inactive, “Never”
+- Lock Screen > Turn display off on battery when inactive, “For 20 minutes”
+- Lock Screen > Turn display off on power adapter when inactive, “For 20 minutes”
+- Lock Screen > Require password after screen saver begins or display is turned off, “Immediately”
 - Software Update > Automatic updates, “Enabled”
 - Trackpad > Tap to click, “Enabled”
 
