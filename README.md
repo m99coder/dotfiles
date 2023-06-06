@@ -182,7 +182,7 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 brew install kubernetes-cli kubectx fzf
 
 # for AWS
-brew install awscli int128/kubelogin/kubelogin jq
+brew install awscli int128/kubelogin/kubelogin jq docker-credential-helper-ecr
 aws configure sso
 aws sso login
 ```
