@@ -176,13 +176,19 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 ```
 
+### Tools
+
+```shell
+brew install coreutils findutils fzf jq parallel
+```
+
 ### Kubernetes
 
 ```shell
-brew install kubernetes-cli kubectx fzf
+brew install kubernetes-cli kubectx
 
 # for AWS
-brew install awscli int128/kubelogin/kubelogin jq docker-credential-helper-ecr
+brew install awscli int128/kubelogin/kubelogin docker-credential-helper-ecr
 aws configure sso
 aws sso login
 ```
