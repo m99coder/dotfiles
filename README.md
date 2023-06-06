@@ -193,7 +193,6 @@ aws configure sso
 aws sso login
 ```
 
-
 ## Google
 
 - [Calendar Sync](https://calendar.google.com/calendar/u/0/syncselect)
