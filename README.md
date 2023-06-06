@@ -176,6 +176,18 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 ```
 
+### Kubernetes
+
+```shell
+brew install kubernetes-cli kubectx fzf
+
+# for AWS
+brew install awscli int128/kubelogin/kubelogin jq
+aws configure sso
+aws sso login
+```
+
+
 ## Google
 
 - [Calendar Sync](https://calendar.google.com/calendar/u/0/syncselect)
