@@ -1,3 +1,9 @@
+# add zsh profiler
+# zmodload zsh/zprof
+
+# direnv
+eval "$(direnv hook zsh)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -10,6 +16,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+
+# oh-my-zsh
+# see: https://github.com/ahmetb/kubectx/issues/157#issuecomment-1287588271
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +52,12 @@ alias gitp="git log --pretty=format:'%C(yellow)%h %Cred%ad%Cgreen%d %Creset%s' -
 alias grsm='git reset $(git merge-base master $(git branch --show-current))'
 alias gpb="git fetch -p && git branch -vv | grep gone | cut -d' ' -f 3 | grep . | xargs git branch -D"
 
+# Kubernetes
+[[ $commands[kubectl] ]] || source <(kubectl completion zsh)
+
+# AWS
+export AWS_PROFILE=production
+
 # Spaceship prompt
 source /opt/homebrew/opt/spaceship/spaceship.zsh
 
@@ -51,9 +67,8 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Zoxide
 eval "$(zoxide init zsh)"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
+# run zsh profiler
+# zprof
