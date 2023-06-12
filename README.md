@@ -210,6 +210,8 @@ aws sso login
 - Zoom
 - Slack
 
+Rebind `⌥⌘I` for “Upper Right” in Tiles, as it otherwise interferes with the Developer Tools in Google Chrome.
+
 ## Programming Languages
 
 - Node.js
