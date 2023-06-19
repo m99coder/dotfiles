@@ -212,6 +212,17 @@ aws sso login
 
 Rebind `⌥⌘I` for “Upper Right” in Tiles, as it otherwise interferes with the Developer Tools in Google Chrome.
 
+### Obsidian
+
+- Theme: [Material Gruvbox](https://github.com/AllJavi/material_gruvbox_obsidian)
+- Editor > General > Default editing mode: “Source mode”
+- Editor > Display > Fold heading, Fold indent, Show indentation guides (all disabled)
+- Editor > Advanced > Auto convert HTML (disabled)
+- Files & Links > Confirm file deletion (disabled)
+- Appearance > Font size: 14
+- Appearance > Show inline title (disabled)
+- Appearance > Show tab title bar (disabled)
+
 ## Programming Languages
 
 - Node.js
