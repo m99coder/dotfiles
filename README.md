@@ -219,6 +219,7 @@ Rebind `⌥⌘I` for “Upper Right” in Tiles, as it otherwise interferes with
 - Editor > Display > Fold heading, Fold indent, Show indentation guides (all disabled)
 - Editor > Advanced > Auto convert HTML (disabled)
 - Files & Links > Confirm file deletion (disabled)
+- Appearance > Text font, Monospace font: “FiraCode Nerd Font”
 - Appearance > Font size: 14
 - Appearance > Show inline title (disabled)
 - Appearance > Show tab title bar (disabled)
