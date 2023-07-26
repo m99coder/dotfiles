@@ -59,16 +59,17 @@ alias gpb="git fetch -p && git branch -vv | grep gone | cut -d' ' -f 3 | grep . 
 export AWS_PROFILE=production
 
 # Spaceship prompt
-source /opt/homebrew/opt/spaceship/spaceship.zsh
+source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
 # ZSH syntax highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# alternatively use this: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Zoxide
 eval "$(zoxide init zsh)"
 
 # asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. $(brew --prefix)/opt/asdf/libexec/asdf.sh
 
 # run zsh profiler
 # zprof
