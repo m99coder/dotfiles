@@ -63,8 +63,6 @@ function awsctx() {
     profile=$(aws configure list-profiles | fzf)
     if [[ $profile != "" ]]; then
       export AWS_PROFILE=$profile
-    else
-      echo "Nope!"
     fi
   else
     export AWS_PROFILE=$1
