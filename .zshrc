@@ -58,6 +58,20 @@ alias gpb="git fetch -p && git branch -vv | grep gone | cut -d' ' -f 3 | grep . 
 # AWS
 export AWS_PROFILE=production
 
+function awsctx() {
+  if [ -z "$1" ]; then
+    profile=$(aws configure list-profiles | fzf)
+    if [[ $profile != "" ]]; then
+      export AWS_PROFILE=$profile
+    else
+      echo "Nope!"
+    fi
+  else
+    export AWS_PROFILE=$1
+  fi
+  echo -e "\033[32m$AWS_PROFILE\033[0m selected"
+}
+
 # Spaceship prompt
 source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
