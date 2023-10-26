@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git kubectl)
 
 # oh-my-zsh
 # see: https://github.com/ahmetb/kubectx/issues/157#issuecomment-1287588271
@@ -36,7 +36,7 @@ export HISTSIZE=10000000
 export LANG=en_US.UTF-8
 
 # Preferred editor
-export EDITOR='nano'
+export EDITOR="nano"
 
 # Set personal aliases
 alias brewup="brew update && brew upgrade && brew cleanup; brew upgrade --cask; brew doctor"
@@ -44,6 +44,8 @@ alias brewrm="brew autoremove"
 
 alias ll="ls -al"
 alias refresh="source $HOME/.zshrc"
+alias shellup="eval $(/opt/homebrew/bin/brew shellenv)"
+alias watch="watch "
 
 alias git="LANG=C git"
 alias gitup="gfind . -maxdepth 8 -name '.git' -prune -type d -printf '%h\n' | parallel 'echo {} && git -C {} pull'"
