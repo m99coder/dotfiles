@@ -176,6 +176,17 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 ```
 
+### k9s
+
+> <https://k9scli.io/>
+
+```shell
+brew install k9s
+mkdir -p ~/.config/k9s
+wget -P ~/.config/k9s/ https://raw.githubusercontent.com/derailed/k9s/master/skins/gruvbox-dark.yml
+ln -s ~/.config/k9s/gruvbox-dark.yml ~/Library/Application\ Support/k9s/skin.yml
+```
+
 ### Tools
 
 ```shell
