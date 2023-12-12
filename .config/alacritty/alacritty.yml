@@ -50,6 +50,7 @@ colors:
   # Default colors
   primary:
     # hard contrast: background = '0x1d2021'
+    # black used in tools like k9s, btop: '0x070707'
     background: '0x282828'
     # soft contrast: background = '0x32302f'
     foreground: '0xebdbb2'
@@ -102,8 +103,10 @@ key_bindings:
   # \x70 is p                change to the previous window
   # \x78 is x                kill the current pane (and window if last pane)
   # \x7a is z                toggle zoom state of the current pane
-  - { key: N,     mods: Command,       chars: "\x02\x22"     }
-  - { key: N,     mods: Command|Shift, chars: "\x02\x25"     }
+  #- { key: N,     mods: Command,       chars: "\x02\x22"     }
+  - { key: N,     mods: Command,       chars: "\x02\x22\x02\x1b2"     }
+  #- { key: N,     mods: Command|Shift, chars: "\x02\x25"     }
+  - { key: N,     mods: Command|Shift, chars: "\x02\x25\x02\x1b1"     }
   - { key: Key0,  mods: Command,       chars: "\x02\x30"     }
   - { key: Key1,  mods: Command,       chars: "\x02\x31"     }
   - { key: Key2,  mods: Command,       chars: "\x02\x32"     }
@@ -118,7 +121,19 @@ key_bindings:
   #- { key: Left,  mods: Command,       chars: "\x02\x1b5b44" }
   #- { key: Right, mods: Command,       chars: "\x02\x1b5b43" }
   #- { key: Down,  mods: Command,       chars: "\x02\x1b5b42" }
+  # https://github.com/alacritty/alacritty/issues/93#issuecomment-353489475
   - { key: T,     mods: Command,       chars: "\x02\x63"     }
   - { key: O,     mods: Command,       chars: "\x02\x6f"     }
-  - { key: W,     mods: Command,       chars: "\x02\x78"     }
+  #- { key: W,     mods: Command,       chars: "\x02\x78"     }
+  - { key: W,     mods: Command,       chars: "\x02\x78\x02\x1b1\x02\x1b2"     }
   - { key: Z,     mods: Command,       chars: "\x02\x7a"     }
+  - { key: Key0,  mods: Alt,           chars: "\x1b0"        }
+  - { key: Key1,  mods: Alt,           chars: "\x1b1"        }
+  - { key: Key2,  mods: Alt,           chars: "\x1b2"        }
+  - { key: Key3,  mods: Alt,           chars: "\x1b3"        }
+  - { key: Key4,  mods: Alt,           chars: "\x1b4"        }
+  - { key: Key5,  mods: Alt,           chars: "\x1b5"        }
+  - { key: Key6,  mods: Alt,           chars: "\x1b6"        }
+  - { key: Key7,  mods: Alt,           chars: "\x1b7"        }
+  - { key: Key8,  mods: Alt,           chars: "\x1b8"        }
+  - { key: Key9,  mods: Alt,           chars: "\x1b9"        }
