@@ -50,12 +50,14 @@ family = "FiraCode Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
-chars = "\u0002\"\u0002\u001B2"
+#chars = "\u0002\"\u0002\u001B2"
+chars = "\u0002\u0022" # 22 is the double quote
 key = "N"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002%\u0002\u001B1"
+#chars = "\u0002%\u0002\u001B1"
+chars = "\u0002%"
 key = "N"
 mods = "Command|Shift"
 
@@ -120,7 +122,8 @@ key = "O"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u0002x\u0002\u001B1\u0002\u001B2"
+#chars = "\u0002x\u0002\u001B1\u0002\u001B2"
+chars = "\u0002x"
 key = "W"
 mods = "Command"
 
