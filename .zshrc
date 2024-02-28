@@ -48,7 +48,7 @@ alias shellup="eval $(/opt/homebrew/bin/brew shellenv)"
 alias watch="watch "
 
 alias git="LANG=C git"
-alias gitup="gfind . -maxdepth 8 -name '.git' -prune -type d -printf '%h\n' | parallel 'echo {} && git -C {} pull'"
+alias gitup="gfind . -maxdepth 8 -name '.git' -not -path '*/.terraform/*' -prune -type d -printf '%h\n' | parallel 'echo {} && git -C {} pull'"
 alias gitg="git log --all --decorate --oneline --graph"
 alias gitp="git log --pretty=format:'%C(yellow)%h %Cred%ad%Cgreen%d %Creset%s' --date=short --graph --all"
 alias grsm='git reset $(git merge-base master $(git branch --show-current))'
