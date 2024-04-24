@@ -82,7 +82,12 @@ require("packer").startup {
     use "windwp/nvim-autopairs"
 
     -- colorscheme
-    use "gruvbox-community/gruvbox"
+    use {
+      "loctvl842/monokai-pro.nvim",
+       config = function()
+         require("monokai-pro").setup()
+       end
+    }
 
     -- treesitter (better syntax highlighting)
     use {
@@ -140,7 +145,7 @@ require("packer").startup {
 }
 
 -- set colorscheme
-vim.cmd [[ colorscheme gruvbox ]]
+vim.cmd [[ colorscheme monokai-pro ]]
 
 --[[
   setups
