@@ -36,7 +36,7 @@ export HISTSIZE=10000000
 export LANG=en_US.UTF-8
 
 # Preferred editor
-export EDITOR="nano"
+export EDITOR="nvim"
 
 # Set personal aliases
 alias brewup="brew update && brew upgrade && brew cleanup; brew upgrade --cask; brew doctor"
