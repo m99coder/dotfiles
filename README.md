@@ -111,9 +111,10 @@ An alternative and if you ask me way better icon can downloaded [here](https://y
 ### tmux
 
 > <https://tmux.github.io/>
+> <https://github.com/tmux-plugins/tpm>
 
 ```shell
-brew install tmux
+brew install tmux tpm
 ```
 
 ### Fira Code Nerd Font
@@ -121,7 +122,6 @@ brew install tmux
 > <https://github.com/ryanoasis/nerd-fonts>
 
 ```shell
-brew tap homebrew/cask-fonts
 brew install font-fira-code-nerd-font
 ```
 
