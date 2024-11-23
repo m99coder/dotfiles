@@ -194,7 +194,7 @@ ln -s ~/.config/k9s/gruvbox-dark.yml ~/Library/Application\ Support/k9s/skin.yml
 ### Tools
 
 ```shell
-brew install coreutils findutils fzf jq parallel
+brew install coreutils findutils fzf jq most parallel
 ```
 
 ### Kubernetes
