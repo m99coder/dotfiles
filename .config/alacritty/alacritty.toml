@@ -114,6 +114,17 @@ chars = "\u0002z"
 key = "Z"
 mods = "Command"
 
+# see: https://stackoverflow.com/a/78008190
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
 #[[hints.enabled]]
 #command = "open"
 #hyperlinks = true
