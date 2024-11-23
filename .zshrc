@@ -35,8 +35,18 @@ export HISTSIZE=10000000
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor
-export EDITOR="nvim"
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# Most pager
+export PAGER="most"
+
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
 
 # Set personal aliases
 alias brewup="brew update && brew upgrade && brew cleanup; brew upgrade --cask; brew doctor"
