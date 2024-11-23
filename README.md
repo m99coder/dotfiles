@@ -60,6 +60,10 @@ defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" &
 - Software Update > Automatic updates, “Enabled”
 - Trackpad > Tap to click, “Enabled”
 
+```shell
+sudo scutil --set HostName
+```
+
 ## XCode
 
 ```shell
