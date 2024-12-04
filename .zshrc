@@ -82,6 +82,12 @@ function awsctx() {
   echo -e "\033[32m$AWS_PROFILE\033[0m selected"
 }
 
+# configure fzf
+export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
+
+# enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Spaceship prompt
 source $(brew --prefix)/opt/spaceship/spaceship.zsh
 
