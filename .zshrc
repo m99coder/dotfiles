@@ -100,7 +100,7 @@ eval "$(zoxide init zsh)"
 
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
-#export PATH=~/.asdf/asdf-partial:$PATH
+export PATH=~/.asdf/asdf-partial:$PATH
 
 function anup() {
   if [ -z "$1" ]; then
