@@ -186,6 +186,17 @@ asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 ```
 
+Add `asdf-partial` as described [here](https://github.com/valeriangalliat/asdf-partial?tab=readme-ov-file#installation).
+
+```shell
+git clone https://github.com/valeriangalliat/asdf-partial ~/.asdf/asdf-partial
+```
+
+```shell
+# add to ~/.zshrc
+export PATH=~/.asdf/asdf-partial:$PATH
+```
+
 ### k9s
 
 > <https://k9scli.io/>
