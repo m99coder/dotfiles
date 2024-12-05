@@ -100,6 +100,19 @@ eval "$(zoxide init zsh)"
 
 # asdf
 . $(brew --prefix)/opt/asdf/libexec/asdf.sh
+#export PATH=~/.asdf/asdf-partial:$PATH
+
+function anup() {
+  if [ -z "$1" ]; then
+    echo "usage: anup <major version>"
+    return 1
+  else
+    asdf install nodejs "$(asdf nodejs resolve $1 --latest-available)"
+  fi
+}
+
+# Most pager
+export PAGER="most"
 
 # run zsh profiler
 # zprof
