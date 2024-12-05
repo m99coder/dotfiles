@@ -192,6 +192,8 @@ Add `asdf-partial` as described [here](https://github.com/valeriangalliat/asdf-p
 git clone https://github.com/valeriangalliat/asdf-partial ~/.asdf/asdf-partial
 ```
 
+Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` as described [here](https://github.com/asdf-vm/asdf-nodejs?tab=readme-ov-file#nvmrc-and-node-version-support).
+
 ```shell
 # add to ~/.zshrc
 export PATH=~/.asdf/asdf-partial:$PATH
