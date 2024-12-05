@@ -121,6 +121,12 @@ An alternative and if you ask me way better icon can downloaded [here](https://y
 brew install tmux tpm
 ```
 
+tmux is configured with automatically restoring a previous session. This happens when Alacritty is closed or a reboot happens. In this case re-attach to the previous session like that:
+
+```shell
+tmux attach -d -t main
+```
+
 ### Fira Code Nerd Font
 
 > <https://github.com/ryanoasis/nerd-fonts>
