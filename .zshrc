@@ -111,5 +111,8 @@ function anup() {
   fi
 }
 
+# Rust
+. "$HOME/.cargo/env"
+
 # run zsh profiler
 # zprof
