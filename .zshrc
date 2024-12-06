@@ -111,8 +111,5 @@ function anup() {
   fi
 }
 
-# Most pager
-export PAGER="most"
-
 # run zsh profiler
 # zprof
