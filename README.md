@@ -199,6 +199,14 @@ Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` a
 export PATH=~/.asdf/asdf-partial:$PATH
 ```
 
+### Rust
+
+> <https://rustup.rs/>
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
 ### k9s
 
 > <https://k9scli.io/>
