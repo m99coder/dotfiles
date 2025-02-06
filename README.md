@@ -193,11 +193,6 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 
 Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` as described [here](https://github.com/asdf-vm/asdf-nodejs?tab=readme-ov-file#nvmrc-and-node-version-support).
 
-```shell
-# add to ~/.zshrc
-export PATH=~/.asdf/asdf-partial:$PATH
-```
-
 ### Rust
 
 > <https://rustup.rs/>
