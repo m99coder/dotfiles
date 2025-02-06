@@ -177,19 +177,18 @@ brew install neovim
 
 ```shell
 # add to ~/.zshrc
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+export PATH=$HOME/bin:$PATH
+
+…
+
+export ASDF_DATA_DIR="$HOME/.asdf"
+export PATH="$ASDF_DATA_DIR/shims:$PATH"
 ```
 
 ```shell
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
-```
-
-Add `asdf-partial` as described [here](https://github.com/valeriangalliat/asdf-partial?tab=readme-ov-file#installation).
-
-```shell
-git clone https://github.com/valeriangalliat/asdf-partial ~/.asdf/asdf-partial
 ```
 
 Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` as described [here](https://github.com/asdf-vm/asdf-nodejs?tab=readme-ov-file#nvmrc-and-node-version-support).
