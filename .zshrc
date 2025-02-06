@@ -108,7 +108,7 @@ function anup() {
     echo "usage: anup <major version>"
     return 1
   else
-    asdf install nodejs "$(asdf nodejs resolve $1 --latest-available)"
+    asdf install nodejs "$(asdf list all nodejs $1 | sort --version-sort --reverse | head -1 | xargs)"
   fi
 }
 
