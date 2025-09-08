@@ -279,3 +279,17 @@ Rebind `⌥⌘I` for “Upper Right” in Tiles, as it otherwise interferes with
 ## Git
 
 Don’t forget to adjust the `email` values for the [personal](https://github.com/m99coder/dotfiles/blob/main/.gitconfig.personal#L2) and [work](https://github.com/m99coder/dotfiles/blob/main/.gitconfig.work#L2) configuration files in order to see correct users on GitHub. The config also enables signing commits using a specific SSH public key.
+
+## Podman
+
+```shell
+# install podman and podman compose
+brew install podman podman-compose
+
+# use podman instead of docker (has to be added to ~/.zshenv)
+alias docker="podman"
+alias docker-compose="podman compose"
+
+# use zsh instead of sh for npm shell
+npm config set script-shell zsh
+```
