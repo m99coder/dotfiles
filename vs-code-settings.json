@@ -25,7 +25,7 @@
     "explorer.autoReveal": false,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
     "terminal.integrated.tabs.enabled": false,
     "terminal.integrated.tabs.location": "left",
     "security.workspace.trust.untrustedFiles": "open",
