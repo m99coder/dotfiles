@@ -125,6 +125,9 @@ tmux is configured with automatically restoring a previous session. This happens
 
 ```shell
 tmux attach -d -t main
+
+# type this in terminal if tmux is already running to reload the configuration
+tmux source ~/.config/tmux/tmux.conf
 ```
 
 ### Fira Code Nerd Font
