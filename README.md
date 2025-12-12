@@ -166,6 +166,14 @@ Hook into zsh shell as described [here](https://direnv.net/docs/hook.html#zsh).
 brew install zoxide
 ```
 
+### micro
+
+> <https://micro-editor.github.io/>
+
+```shell
+brew install micro
+```
+
 ### Neovim
 
 > <https://neovim.io/>
