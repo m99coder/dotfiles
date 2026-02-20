@@ -60,6 +60,7 @@ alias watch="watch "
 
 alias git="LANG=C git"
 alias gitup="gfind . -maxdepth 8 -name '.git' -not -path '*/.terraform/*' -prune -type d -printf '%h\n' | parallel 'echo {} && git -C {} pull'"
+alias gitbra="gfind . -maxdepth 2 -name '.git' -not -path '*/.terraform/*' -prune -type d -printf '%h\n' | sort | parallel 'echo -n \"{}: \" && git -C {} rev-parse --abbrev-ref HEAD'"
 alias gitg="git log --all --decorate --oneline --graph"
 alias gitp="git log --pretty=format:'%C(yellow)%h %Cred%ad%Cgreen%d %Creset%s' --date=short --graph --all"
 alias grsm='git reset $(git merge-base master $(git branch --show-current))'
