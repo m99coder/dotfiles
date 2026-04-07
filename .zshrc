@@ -116,5 +116,32 @@ function anup() {
 # Rust
 . "$HOME/.cargo/env"
 
+# Alacritty
+function upal() {
+  local prev_dir=$(pwd)
+
+  cd $HOME/Projects/personal/alacritty || return 1
+
+  git fetch
+
+  LOCAL=$(git rev-parse HEAD)
+  REMOTE=$(git rev-parse @{u})
+
+  if [ "$LOCAL" = "$REMOTE" ]; then
+    echo "Alacritty is already up to date."
+    cd "$prev_dir"
+    return 0
+  fi
+
+  echo "Updates found, building..."
+  git pull &&
+  make app &&
+  cp -r target/release/osx/Alacritty.app /Applications &&
+  fileicon set /Applications/Alacritty.app $HOME/Documents/personal/alacritty.icns &&
+  echo "Alacritty updated and installed successfully."
+
+  cd "$prev_dir"
+}
+
 # run zsh profiler
 # zprof
