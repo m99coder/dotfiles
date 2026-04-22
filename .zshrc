@@ -85,8 +85,8 @@ function awsctx() {
 }
 
 autoload -Uz compinit && compinit
-autoload -Uz bashcompinit && bashcompinit
-source $HOME/.zsh/completions/_awsctx_completion
+_awsctx() { compadd $(aws configure list-profiles 2>/dev/null) }
+compdef _awsctx awsctx
 
 # configure fzf
 export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
