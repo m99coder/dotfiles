@@ -1,0 +1,18 @@
+#/usr/bin/env bash
+
+_awsctx_completion() {
+  if [ "${#COMP_WORDS[@]}" != "2" ]; then
+    return
+  fi
+
+  local profiles=($(compgen -W "$(aws configure list-profiles)" "${COMP_WORDS[1]}"))
+
+  if [ "${#profiles[@]}" == "1" ]; then
+    local profile=$(echo ${profiles[0]/%\ */})
+    COMPREPLY=("$profile")
+  else
+    COMPREPLY=("${profiles[@]}")
+  fi
+}
+
+complete -F _awsctx_completion awsctx
