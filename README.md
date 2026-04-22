@@ -102,6 +102,8 @@ brew install zsh-syntax-highlighting
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+Also add [fzf-tab](https://github.com/Aloxaf/fzf-tab) to replace `zsh` default completion selection menu with `fzf`.
+
 ### Alacritty
 
 > <https://alacritty.org/>
