@@ -16,7 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl)
+plugins=(fzf-tab git kubectl)
 
 # oh-my-zsh
 # see: https://github.com/ahmetb/kubectx/issues/157#issuecomment-1287588271
@@ -84,7 +84,6 @@ function awsctx() {
   echo -e "\033[32m$AWS_PROFILE\033[0m selected"
 }
 
-autoload -Uz compinit && compinit
 _awsctx() { compadd $(aws configure list-profiles 2>/dev/null) }
 compdef _awsctx awsctx
 
