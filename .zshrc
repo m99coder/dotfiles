@@ -84,6 +84,10 @@ function awsctx() {
   echo -e "\033[32m$AWS_PROFILE\033[0m selected"
 }
 
+autoload -Uz compinit && compinit
+autoload -Uz bashcompinit && bashcompinit
+source $HOME/.zsh/completions/_awsctx_completion
+
 # configure fzf
 export FZF_DEFAULT_COMMAND='fd --type f --color=never --hidden'
 
