@@ -64,7 +64,8 @@ alias gitbra="gfind . -maxdepth 2 -name '.git' -not -path '*/.terraform/*' -prun
 alias gitg="git log --all --decorate --oneline --graph"
 alias gitp="git log --pretty=format:'%C(yellow)%h %Cred%ad%Cgreen%d %Creset%s' --date=short --graph --all"
 alias grsm='git reset $(git merge-base master $(git branch --show-current))'
-alias gpb="git fetch -p && git branch -vv | grep gone | cut -d' ' -f 3 | grep . | xargs git branch -D"
+alias gpb="git fetch -p && git branch --format='%(if:equals=[gone])%(upstream:track)%(then)%(if)%(worktreepath)%(then)%(else)%(refname:short)%(end)%(end)' | xargs -r git branch -D"
+alias gfaf="gfa --force"
 
 # Kubernetes
 [[ $commands[kubectl] ]] || source <(kubectl completion zsh)
