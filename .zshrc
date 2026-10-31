@@ -57,6 +57,7 @@ alias ll="ls -al"
 alias refresh="source $HOME/.zshrc"
 alias shellup="eval $(/opt/homebrew/bin/brew shellenv)"
 alias watch="watch "
+alias tmuxa="tmux new -A -s main"
 
 alias git="LANG=C git"
 alias gitup="gfind . -maxdepth 8 -name '.git' -not -path '*/.terraform/*' -prune -type d -printf '%h\n' | parallel 'echo {} && git -C {} pull'"
