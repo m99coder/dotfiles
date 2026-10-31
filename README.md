@@ -86,6 +86,8 @@ xcode-select --install
 brew install zsh
 ```
 
+`~/.zshrc` starts with `typeset -U PATH path FPATH fpath` to drop duplicate entries, and `refresh` restarts the shell with a clean `PATH` instead of re-sourcing `~/.zshrc`, which can’t undo removed entries.
+
 ### Zsh Syntax Highlighting
 
 > <https://github.com/zsh-users/zsh-syntax-highlighting>
@@ -136,7 +138,8 @@ If `PATH` changes in `~/.zshrc` while the tmux server is running, new panes stil
 
 ```shell
 tmux set-environment -g PATH "/usr/bin:/bin:/usr/sbin:/sbin"
-PATH=/usr/bin:/bin:/usr/sbin:/sbin exec zsh -l
+# alias for 'PATH=/usr/bin:/bin:/usr/sbin:/sbin exec zsh -l'
+refresh
 ```
 
 ### Fira Code Nerd Font
@@ -196,19 +199,14 @@ brew install neovim
 > <https://asdf-vm.com/>
 
 ```shell
-# add to ~/.zshrc
-export PATH=$HOME/bin:$PATH
-
-…
-
+# add to ~/.zshrc; the oh-my-zsh `asdf` plugin puts the shims on the PATH
 export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
 ```
 
 ```shell
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+asdf plugin add tflint
+asdf plugin add opentofu
 ```
 
 Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` as described [here](https://github.com/asdf-vm/asdf-nodejs?tab=readme-ov-file#nvmrc-and-node-version-support).
@@ -218,8 +216,15 @@ Enable support for legacy `.nvmrc` and `.node-version` by adding the `.asdfrc` a
 > <https://rustup.rs/>
 
 ```shell
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+brew install rustup
+
+# add to ~/.zshrc after sourcing ~/.cargo/env (rustup is keg-only)
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+
+rustup default stable
 ```
+
+`brew upgrade` updates rustup itself (`rustup self update` is disabled in this build), and `rustup update` updates the toolchains. Binaries from `cargo install` still land in `~/.cargo/bin`.
 
 ### k9s
 
@@ -289,8 +294,7 @@ Rebind `⌥⌘I` for “Upper Right” in Tiles, as it otherwise interferes with
 ## Programming Languages
 
 - Node.js
-- Go
-- Ruby
+- Rust
 
 ## SSH Keys
 
