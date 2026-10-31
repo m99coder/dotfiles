@@ -4,10 +4,6 @@
 # direnv
 eval "$(direnv hook zsh)"
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/bin
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -16,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf-tab git kubectl)
+plugins=(fzf-tab asdf direnv docker git kubectl)
 
 # oh-my-zsh
 # see: https://github.com/ahmetb/kubectx/issues/157#issuecomment-1287588271
@@ -107,7 +103,8 @@ eval "$(zoxide init zsh)"
 
 # asdf
 export ASDF_DATA_DIR="$HOME/.asdf"
-export PATH="$ASDF_DATA_DIR/shims:$PATH"
+# already done by oh-my-zsh's asdf plugin
+#export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 function anup() {
   if [ -z "$1" ]; then
