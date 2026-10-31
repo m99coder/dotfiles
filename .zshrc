@@ -1,6 +1,9 @@
 # add zsh profiler
 # zmodload zsh/zprof
 
+# stop the duplicates
+typeset -U PATH path FPATH fpath
+
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -50,7 +53,7 @@ alias brewup="brew update && brew upgrade && brew cleanup; brew upgrade --cask; 
 alias brewrm="brew autoremove"
 
 alias ll="ls -al"
-alias refresh="source $HOME/.zshrc"
+alias refresh='PATH=/usr/bin:/bin:/usr/sbin:/sbin exec zsh -l'
 alias shellup="eval $(/opt/homebrew/bin/brew shellenv)"
 alias watch="watch "
 alias tmuxa="tmux new -A -s main"
