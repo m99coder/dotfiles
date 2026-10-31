@@ -106,8 +106,6 @@ eval "$(zoxide init zsh)"
 
 # asdf
 export ASDF_DATA_DIR="$HOME/.asdf"
-# already done by oh-my-zsh's asdf plugin
-#export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 function anup() {
   if [ -z "$1" ]; then
@@ -120,6 +118,7 @@ function anup() {
 
 # Rust
 . "$HOME/.cargo/env"
+export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
 
 # Alacritty
 function upal() {
