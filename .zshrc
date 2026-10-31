@@ -67,9 +67,6 @@ alias grsm='git reset $(git merge-base master $(git branch --show-current))'
 alias gpb="git fetch -p && git branch --format='%(if:equals=[gone])%(upstream:track)%(then)%(if)%(worktreepath)%(then)%(else)%(refname:short)%(end)%(end)' | xargs -r git branch -D"
 alias gfaf="gfa --force"
 
-# Kubernetes
-[[ $commands[kubectl] ]] || source <(kubectl completion zsh)
-
 # AWS
 export AWS_PROFILE=production
 
