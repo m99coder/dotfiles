@@ -126,10 +126,17 @@ brew install tmux tpm
 tmux is configured with automatically restoring a previous session. This happens when Alacritty is closed or a reboot happens. In this case re-attach to the previous session like that:
 
 ```shell
-tmux attach -d -t main
+tmux new -A -s main
 
 # type this in terminal if tmux is already running to reload the configuration
 tmux source ~/.config/tmux/tmux.conf
+```
+
+If `PATH` changes in `~/.zshrc` while the tmux server is running, new panes still inherit the old `PATH` from the server. Reset it, then restart the shell in any open pane:
+
+```shell
+tmux set-environment -g PATH "/usr/bin:/bin:/usr/sbin:/sbin"
+PATH=/usr/bin:/bin:/usr/sbin:/sbin exec zsh -l
 ```
 
 ### Fira Code Nerd Font
